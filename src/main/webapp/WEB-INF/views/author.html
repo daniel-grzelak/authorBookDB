@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Author form</title>
+</head>
+<body>
+<form th:action="@{/author}" th:object="${author}" method="post">
+    <table>
+        <tbody>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+        <tr>
+            <td>Surname</td>
+            <td><input type="text" th:field="*{surname}"/></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="date" th:field="*{age}"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="SEND"/></td>
+            <td><input type="reset" value="RESET"/></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

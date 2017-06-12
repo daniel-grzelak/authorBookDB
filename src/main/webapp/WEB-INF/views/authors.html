@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Surname</th>
+    </thead>
+    <tbody>
+    <tr th:each="a : ${#lists.sort(authors, comparator)}">
+        <td th:text="${a.name}"></td>
+        <td th:text="${a.age}"></td>
+        <td th:text="${a.surname}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
